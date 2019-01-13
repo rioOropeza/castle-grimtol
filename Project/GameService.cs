@@ -59,7 +59,16 @@ namespace CastleGrimtol.Project
 
     public void Go(string key)
     {
-      if (CurrentRoom.Exits.ContainsKey(key))
+      if (CurrentRoom.Exits.ContainsKey(key) && CurrentRoom.Locked == false)
+      {
+        CurrentRoom = CurrentRoom.Exits[key];
+        Look();
+      }
+      else if (key == "north" && CurrentRoom.Locked == true)
+      {
+        System.Console.WriteLine("it's too dark to see");
+      }
+      else if (key == "south" && CurrentRoom.Locked == true)
       {
         CurrentRoom = CurrentRoom.Exits[key];
         Look();
@@ -121,6 +130,7 @@ namespace CastleGrimtol.Project
       Item Torch = new Item("torch", "a simple torch that will light up a dark zone");
       Item Farcaster = new Item("farcaster", "this item will summon a drake to carry you back to base camp safe and sound");
 
+      zone7.Locked = true;
       CurrentRoom = zone3;
       System.Console.Write("what's your name?");
       string playerName = System.Console.ReadLine();
@@ -184,7 +194,8 @@ namespace CastleGrimtol.Project
       }
       else if (CurrentRoom.Name == "Zone7" && Item.Name == "torch")
       {
-        System.Console.WriteLine("i used the torch!");
+        CurrentRoom.Locked = false;
+        System.Console.WriteLine("LET THERE BE LIGHT. You can now see an exit to the north.");
       }
       else if (CurrentRoom.Name == "Zone8" && Item.Name == "farcaster")
       {

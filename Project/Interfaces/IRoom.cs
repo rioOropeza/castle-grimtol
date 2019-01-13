@@ -10,5 +10,6 @@ namespace CastleGrimtol.Project.Interfaces
     List<Item> Items { get; set; }
     Dictionary<string, IRoom> Exits { get; set; }
     bool Win { get; set; }
+    bool Locked { get; set; }
   }
 }
