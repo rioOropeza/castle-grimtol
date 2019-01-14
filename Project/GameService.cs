@@ -14,7 +14,7 @@ namespace CastleGrimtol.Project
 
     public void GetUserInput()
     {
-      System.Console.WriteLine("where do you wanna go??");
+      System.Console.WriteLine("where do you wanna go " + CurrentPlayer.PlayerName + "??");
       string input = System.Console.ReadLine();
       string[] choiceArr = input.Split(" ");
       string choice = choiceArr[0];
