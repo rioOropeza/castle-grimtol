@@ -178,8 +178,16 @@ namespace CastleGrimtol.Project
       {
         System.Console.WriteLine("item not in room");
       }
-      else
+      else if (CurrentRoom.Name == "Zone5" && Item.Name == "torch")
       {
+        CurrentRoom.Description = "this is zone 5.";
+        CurrentRoom.Items.Remove(Item);
+        CurrentPlayer.Inventory.Add(Item);
+        Inventory();
+      }
+      else if (CurrentRoom.Name == "Zone8" && Item.Name == "farcaster")
+      {
+        CurrentRoom.Description = "this is zone 8. come on dude use the farcaster let's get outta here yeah?";
         CurrentRoom.Items.Remove(Item);
         CurrentPlayer.Inventory.Add(Item);
         Inventory();
