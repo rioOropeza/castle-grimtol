@@ -114,7 +114,6 @@ namespace CastleGrimtol.Project
     public void Reset()
     {
       System.Console.Clear();
-      Setup();
       StartGame();
     }
 
