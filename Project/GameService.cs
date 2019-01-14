@@ -196,6 +196,7 @@ namespace CastleGrimtol.Project
       {
         CurrentRoom.Locked = false;
         System.Console.WriteLine("LET THERE BE LIGHT. You can now see an exit to the north.");
+        CurrentRoom.Description = "This is zone7. you can now see an exit to the north.";
       }
       else if (CurrentRoom.Name == "Zone8" && Item.Name == "farcaster")
       {
