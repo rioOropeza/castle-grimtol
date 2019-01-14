@@ -87,8 +87,8 @@ namespace CastleGrimtol.Project
       System.Console.WriteLine("To quit type quit");
       System.Console.WriteLine("to see your inventory type inventory");
       System.Console.WriteLine("To start over type reset");
-      System.Console.WriteLine("To pick up an item in the room type take item");
-      System.Console.WriteLine("To use an item in your inventory, type use item");
+      System.Console.WriteLine("To pick up an item in the room type take and then the item name.");
+      System.Console.WriteLine("To use an item in your inventory, type use and then the items name");
     }
 
     public void Inventory()
