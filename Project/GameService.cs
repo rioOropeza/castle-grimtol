@@ -120,9 +120,9 @@ namespace CastleGrimtol.Project
     public void Setup()
     {
       Room zone3 = new Room("zone3", "this is zone 3.");
-      Room zone4 = new Room("Zone4", "this is zone 4");
+      Room zone4 = new Room("Zone4", "this is zone 4. All directions seem quiet except for I think I can hear a Rathian roaring near the east. maybe don't go that way idk.");
       Room zone5 = new Room("Zone5", "this is zone 5. there's a torch in here, it could come in handy.");
-      Room zone6 = new Room("Zone6", "");
+      Room zone6 = new Room("Zone6", "dude");
       Room zone7 = new Room("Zone7", "this is zone 7. The room is too dark to see anything right now.");
       Room zone8 = new Room("Zone8", "this is zone 8. You've entered a grassy area and OH MY GOD IT'S A FARCASTER! Throw that baby on the ground and let's go back to camp. ");
 
@@ -162,7 +162,7 @@ namespace CastleGrimtol.Project
       {
         if (CurrentRoom.Name == "Zone6")
         {
-          System.Console.WriteLine("A Rathian is flying around in here and it eats you. you're dead");
+          System.Console.WriteLine("A Rathian is flying around in here and it eats you and now you're dead.");
 
           break;
         }
